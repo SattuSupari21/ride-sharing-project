@@ -1,0 +1,88 @@
+version: 2
+
+models:
+  - name: stg_rides
+    description: "Staging model for cleaned ride data"
+    columns:
+      - name: ride_id
+        description: "Unique identifier for the ride"
+        tests:
+          - not_null
+          - unique
+
+      - name: services
+        description: "Type of ride service"
+        tests:
+          - not_null
+
+      - name: ride_date
+        description: "Date of the ride"
+        tests:
+          - not_null
+
+      - name: ride_time
+        description: "Time of the ride"
+        tests:
+          - not_null
+
+      - name: ride_datetime
+        description: "Combined timestamp of the ride"
+        tests:
+          - not_null
+
+      - name: source
+        description: "Starting point of the ride"
+        tests:
+          - not_null
+
+      - name: destination
+        description: "End point of the ride"
+        tests:
+          - not_null
+
+      - name: duration
+        description: "Duration of the ride in minutes"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              strictly: true
+
+      - name: distance
+        description: "Distance of the ride in kilometers"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0.1
+              strictly: true
+
+      - name: ride_charge
+        description: "Base ride charge"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+
+      - name: misc_charge
+        description: "Additional fees and charges"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+
+      - name: total_fare
+        description: "Total fare paid for the ride"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+
+      - name: payment_method
+        description: "Payment method used"
+        tests:
+          - not_null
+
+      - name: ride_status
+        description: "Status of the ride (completed, cancelled, etc.)"
+        tests:
+          - not_null

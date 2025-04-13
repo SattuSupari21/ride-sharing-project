@@ -1,0 +1,62 @@
+[0m06:59:41.903711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41c0d952e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41c0fe2c30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41c0dbcfb0>]}
+
+
+============================== 06:59:41.908403 | c32d169c-595d-4051-b4cd-8daf6df113be ==============================
+[0m06:59:41.908403 [info ] [MainThread]: Running with dbt=1.9.4
+[0m06:59:41.908802 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/sattu/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init ride_analytics', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:59:41.926967 [debug] [MainThread]: Starter project path: /home/sattu/python/rapido-project/project-env/lib/python3.12/site-packages/dbt/include/starter_project
+[0m06:59:41.935166 [info ] [MainThread]: 
+Your new dbt project "ride_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m06:59:41.935490 [info ] [MainThread]: Setting up your profile.
+[0m07:00:08.193367 [info ] [MainThread]: Profile ride_analytics written to /home/sattu/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m07:00:08.194195 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 23.600973, "process_in_blocks": "52720", "process_kernel_time": 0.20798, "process_mem_max_rss": "98204", "process_out_blocks": "80", "process_user_time": 0.930437}
+[0m07:00:08.194546 [debug] [MainThread]: Command `dbt init` succeeded at 07:00:08.194466 after 23.60 seconds
+[0m07:00:08.194814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41c0f08a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41c0b96840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41c127ca10>]}
+[0m07:00:08.195105 [debug] [MainThread]: Flushing usage events
+[0m07:00:09.224645 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:03:51.413452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15d2591a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15d0da7560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15d0578f50>]}
+
+
+============================== 07:03:51.419828 | 8d17472c-b255-480c-a099-aea5b6e8ca8d ==============================
+[0m07:03:51.419828 [info ] [MainThread]: Running with dbt=1.9.4
+[0m07:03:51.420320 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/sattu/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m07:03:51.420720 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/sattu/python/rapido-project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:03:51.422288 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.04558294, "process_in_blocks": "62752", "process_kernel_time": 0.16773, "process_mem_max_rss": "92692", "process_out_blocks": "16", "process_user_time": 0.943482}
+[0m07:03:51.422595 [debug] [MainThread]: Command `dbt run` failed at 07:03:51.422522 after 0.05 seconds
+[0m07:03:51.422847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15d06ae6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15cfff1c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15d0016450>]}
+[0m07:03:51.423120 [debug] [MainThread]: Flushing usage events
+[0m07:03:52.486074 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:39:52.579302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02bf39e360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02c120aed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02bf2d34a0>]}
+
+
+============================== 11:39:52.585143 | 71171330-ee38-47bf-b076-ed79dbe78be3 ==============================
+[0m11:39:52.585143 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:39:52.585678 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/sattu/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m11:39:52.586224 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/sattu/python/rapido-project/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:39:52.587964 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.051059105, "process_in_blocks": "62048", "process_kernel_time": 0.224971, "process_mem_max_rss": "92716", "process_out_blocks": "8", "process_user_time": 0.951017}
+[0m11:39:52.588313 [debug] [MainThread]: Command `dbt run` failed at 11:39:52.588234 after 0.05 seconds
+[0m11:39:52.588586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02bed37fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02bf195eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02bf0970b0>]}
+[0m11:39:52.588885 [debug] [MainThread]: Flushing usage events
+[0m11:39:54.022920 [debug] [MainThread]: An error was encountered while trying to flush usage events
