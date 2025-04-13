@@ -26,7 +26,7 @@ An end-to-end data engineering and analytics pipeline using **PostgreSQL**, **db
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/SattuSupari21/ride-sharing-project.git
-cd ride-sharing-analytics
+cd ride-sharing-project
 ```
 
 ### 2. Initialize Airflow Database
@@ -48,7 +48,7 @@ docker compose up
 - 🛣 Revenue by Route
 - 📉 Cancellations Over Time
 
-> Superset exports and screenshots are located in `/dashboards` and `/visualizations`.
+> Superset exports and screenshots are located in `/visualizations`.
 
 ## 📊 Key Analyses & Dashboards
 |Analysis Model|Description|
